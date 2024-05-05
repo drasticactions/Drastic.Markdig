@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Drastic.Markdig.Sample (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Drastic.Markdig.Sample (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

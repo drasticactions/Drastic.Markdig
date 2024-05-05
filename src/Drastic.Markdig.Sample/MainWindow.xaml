@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Drastic.Markdig.Sample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Drastic.Markdig.Sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:uwp="using:Markdig.UWP"
+    mc:Ignorable="d">
+
+    <Window.Content>
+        <uwp:MarkdownViewer x:Name="MarkdownTestViewer" />
+    </Window.Content>
+</Window>
