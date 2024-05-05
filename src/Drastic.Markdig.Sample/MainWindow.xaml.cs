@@ -24,13 +24,21 @@ namespace Drastic.Markdig.Sample
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        private MarkdownConfig markdownConfig;
+
         public MainWindow()
         {
             this.InitializeComponent();
             this.SystemBackdrop = new MicaBackdrop();
-            var markdownConfig = new MarkdownConfig();
+            markdownConfig = new MarkdownConfig();
             markdownConfig.Markdown = @"Testing Links: [OneOf](https://github.com/mcintyre321/OneOf)";
             this.MarkdownTestViewer.Config = markdownConfig;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            markdownConfig.Markdown = @"Testing Links: [Test](https://github.com/mcintyre321/OneOf)";
+            this.MarkdownTestViewer.Update();
         }
     }
 }

@@ -16,13 +16,18 @@ public sealed partial class MarkdownViewer : UserControl
     {
         if (d is MarkdownViewer self && e.NewValue != null)
         {
-            self.ViewModel.Loading = true;
             self.Config = (MarkdownConfig)e.NewValue;
-            var uiElement = MarkdownUIBuilder.Build(self.Config);
-            self.MarkdownContainer.Children.Clear();
-            self.MarkdownContainer.Children.Add(uiElement);
-            self.ViewModel.Loading = false;
+            self.Update();
         }
+    }
+
+    public void Update()
+    {
+        this.ViewModel.Loading = true;
+        var uiElement = MarkdownUIBuilder.Build(this.Config);
+        this.MarkdownContainer.Children.Clear();
+        this.MarkdownContainer.Children.Add(uiElement);
+        this.ViewModel.Loading = false;
     }
 
     public MarkdownConfig Config
